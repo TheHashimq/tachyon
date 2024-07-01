@@ -1,0 +1,3 @@
+/home/hashimq/workspace/cpp/Tachyon/build/CMakeFiles/tachyon.dir
+/home/hashimq/workspace/cpp/Tachyon/build/CMakeFiles/edit_cache.dir
+/home/hashimq/workspace/cpp/Tachyon/build/CMakeFiles/rebuild_cache.dir
