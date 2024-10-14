@@ -1,4 +1,0 @@
-#!/bin/bash
-start="$(date +'%S.%N')"
-$@
-echo "$(date +"%S.%N - ${start}" | bc)" >&2
