@@ -1,23 +1,29 @@
-#include <cstdlib>
-#include <fstream>
 #include <iostream>
+#include <fstream>
 #include <sstream>
 
-int main(int argc, char **argv) {
-  if (argc != 2) {
-    std::cerr << "Tachyon : fatal error: no input files" << std::endl;
-    std::cerr << "Tachyon : compilation terminated.    " << std::endl;
-    return EXIT_FAILURE;
-  }
+int main(int argc, char* argv[])
+{
+    if (argc != 2) {
+        std::cerr << "Tachyon : Incorrect usage. Correct usage is..." << std::endl;
+        std::cerr << "Tachyon <input.hy>" << std::endl;
+        return EXIT_FAILURE;
+    }
 
-  std::string content;
-  {
-    std::stringstream content_stream;
-    std::fstream input(argv[1], std::ios::in);
-    content_stream << input.rdbuf();
-    content = content_stream.str();
-  }
-  std::cout << content << std::endl;
-
-  return EXIT_SUCCESS;
+    std::string contents;
+    {
+        std::stringstream contents_stream;
+        std::fstream input(argv[1], std::ios::in);
+        contents_stream << input.rdbuf();
+        contents = contents_stream.str();
+    }
+    std::cout << contents << std::endl;
+    return EXIT_SUCCESS;
 }
+
+
+      
+
+     
+      
+      
